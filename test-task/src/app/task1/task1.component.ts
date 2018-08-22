@@ -14,19 +14,18 @@ export class Task1Component implements OnInit {
 
   ngOnInit() {
     this.service.getInfo()
-    .subscribe(response => {
-      this.uInfo = response.json();
-      console.log(this.uInfo);      
-    });
+      .subscribe(response => {
+        this.uInfo = response.json();
+      });
   }
 
-  remove_user(response){
+  remove_user(response) {
     let index = this.uInfo.indexOf(response);
-		this.uInfo.splice(index, 1);
+    this.uInfo.splice(index, 1);
 
     /* Note: if you need api services than use these */
-		// this.service.removeInfo(response)
-		// 	.subscribe(response => {})
+    // this.service.removeInfo(response)
+    // 	.subscribe(response => {})
   }
 
 }

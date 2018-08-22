@@ -1,4 +1,4 @@
-<table class="table table-hover">
+<table class="table table-hover table-bordered">
   <thead>
     <tr>
       <th>ID</th>
@@ -17,8 +17,7 @@
         <span *ngIf="user.age == null">Unknown</span>
       </td>
       <td>
-        <button (click)="remove_user(user)"
-        class="btn btn-danger">Remove</button>
+        <button (click)="remove_user(user)" class="btn btn-danger">Remove</button>
       </td>
     </tr>
   </tbody>
