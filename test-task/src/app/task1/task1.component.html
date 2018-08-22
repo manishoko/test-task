@@ -1,0 +1,25 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of uInfo">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td style="font-weight: 600;">
+        <span *ngIf="user.age >= 18" style="color: green">{{user.age}}</span>
+        <span *ngIf="user.age < 18" style="color: red">{{user.age}}</span>
+        <span *ngIf="user.age == null">Unknown</span>
+      </td>
+      <td>
+        <button (click)="remove_user(user)"
+        class="btn btn-danger">Remove</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
